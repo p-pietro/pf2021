@@ -1,5 +1,6 @@
 name: Presentation
-on: 
+on:
+  workflow_dispatch:
   push:
     tags:
       - pdf_**
