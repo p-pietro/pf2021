@@ -21,9 +21,14 @@ jobs:
             pdflatex -file-line-error -interaction=nonstopmode pf2021.tex
             pdflatex -file-line-error -interaction=nonstopmode pf2021.tex
             mv pf2021.pdf ..
-      - name: Release
-        uses: softprops/action-gh-release@v1
+#      - name: Release
+#        uses: softprops/action-gh-release@v1
+#        with:
+#          name: Presentation
+#          body: All slides on pdf
+#          files: pf2021.pdf
+      - name: PDF
+        uses: actions/upload-artifact@v2
         with:
-          name: Presentation
-          body: All slides on pdf
-          files: pf2021.pdf
+          name: pf2021
+          path: pf2021.pdf
